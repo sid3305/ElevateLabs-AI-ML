@@ -41,4 +41,7 @@ plt.show()
 
 #Remove outliers beyond ±3σ
 df = df[(np.abs(df['Age']) < 3) & (np.abs(df['Fare']) < 3)]
+
 print(df.shape)
+
+df.to_csv('titanic_cleaned.csv', index=False)
